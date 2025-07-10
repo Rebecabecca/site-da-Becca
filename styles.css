@@ -10,18 +10,19 @@ body {
 
 header {
     background: linear-gradient(135deg, #a56b41, #9a6605);
-    padding: 10px 0;
+    padding: 10px 20px; /* Adicionado padding aqui para espaçamento lateral do logo e nav */
     text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: flex; /* ESSENCIAL: Permite que .logo e nav fiquem lado a lado */
+    align-items: center; /* Alinha verticalmente logo e nav */
+    justify-content: space-between; /* Espaça o logo para a esquerda e a nav para a direita */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
     height: auto;
+    box-sizing: border-box; /* Garante que o padding não adicione largura extra */
 }
 
 header .logo {
@@ -43,10 +44,11 @@ header h1 {
     font-size: 1.2em; /* Reduz o tamanho da fonte do título */
 }
 
+/* Sem alterações nessas regras se você já estava satisfeito com o tamanho/estilo */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0;
+    margin: 10px 0; /* Mantido para não alterar o espaçamento que você já tinha */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -63,6 +65,8 @@ nav ul li a {
     font-size: 1.1em;
     font-weight: 600;
     transition: color 0.3s ease;
+    /* Removidas as propriedades 'position', 'left', 'top' que estavam no seu HTML original
+       e que podem ter causado desalinhamento */
 }
 
 nav ul li a:hover {
@@ -504,30 +508,34 @@ footer p {
     color: white;
 }
 
-header .container {
+/* REGRA REMOVIDA: header .container não existe mais no HTML do header para este propósito.
+   Ajustes feitos diretamente no 'header' para posicionar os filhos. */
+/* header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-}
+} */
 
+/* As regras para header .logo e header nav ul foram mantidas as suas originais,
+   pois o 'header' pai agora as posiciona com flexbox. */
 header .logo {
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin: 10px 0;
+    gap: 5px; /* Mantenha o que você tinha */
+    margin: 10px 0; /* Mantenha o que você tinha */
 }
 
 header nav ul {
     display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    margin: 10px 0;
-    flex-wrap: wrap;
+    justify-content: flex-end; /* Mantenha o que você tinha */
+    gap: 15px; /* Mantenha o que você tinha */
+    margin: 10px 0; /* Mantenha o que você tinha */
+    flex-wrap: wrap; /* Mantenha o que você tinha */
 }
 
 header nav ul li {
-    margin: 0;
+    margin: 0; /* Mantenha o que você tinha */
 }
 
 @media (max-width: 320px) {
