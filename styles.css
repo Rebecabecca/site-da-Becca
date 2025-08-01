@@ -678,14 +678,6 @@ footer .container {
     font-size: 0.8em; /* Reduz o tamanho da fonte no footer */
 }
 
-/* Ajuste adicional para evitar problemas de rolagem horizontal no footer */
-footer .container {
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 @media (max-width: 768px) {
     footer .container {
         font-size: 0.9em;
